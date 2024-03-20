@@ -1,4 +1,4 @@
-public class Hw9 {
+public class JavaHw9 {
     public static void main(String[] args) {
         // Make the binary tree from canvas
         TreeNode root = new TreeNode(4);
