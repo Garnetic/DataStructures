@@ -4,14 +4,13 @@ class TreeNode(object):
         self.left = left
         self.right = right
 
-def lowest_common_ancestor(root, p, q):
-    # If both values are less than the current node, search the left subtree
+def lowestCommonAncestor(root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':    # If both values are less than the current node, search the left subtree
     if root.val > p.val and root.val > q.val:
-        return lowest_common_ancestor(root.left, p, q)
+        return lowestCommonAncestor(root.left, p, q)
 
     # If both values are greater than the current node, search the right subtree
     if root.val < p.val and root.val < q.val:
-        return lowest_common_ancestor(root.right, p, q)
+        return lowestCommonAncestor(root.right, p, q)
 
     # Otherwise, this is the LCA
     return root
@@ -26,14 +25,14 @@ if __name__ == "__main__":
     nine = eight.right = TreeNode(9)
 
     # Test cases
-    lca1 = lowest_common_ancestor(root, one, nine)
+    lca1 = lowestCommonAncestor( root, one, nine)
     print("LCA of 1 and 9:", lca1.val)  # Expected output: 4
 
-    lca2 = lowest_common_ancestor(root, five, nine)
+    lca2 = lowestCommonAncestor(root, five, nine)
     print("LCA of 5 and 9:", lca2.val)  # Expected output: 8
 
-    lca3 = lowest_common_ancestor(root, three, one)
+    lca3 = lowestCommonAncestor(root, three, one)
     print("LCA of 3 and 1:", lca3.val)  # Expected output: 3
 
-    lca4 = lowest_common_ancestor(root, one, five)
+    lca4 = lowestCommonAncestor(root, one, five)
     print("LCA of 1 and 5:", lca4.val)  # Expected output: 4
