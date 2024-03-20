@@ -7,12 +7,12 @@ Steps:
 
 ## Recurse
 - Recurse through the tree to find p & q
-# Condition(s)
+### Condition(s)
 - if p & q are on the same side of the tree, call the function on that subtree
 - if p & q are not on the same side of the tree, then return the (current) root
 
 ## Iterate
 - Iterate through the tree to find p & q
-# Condition(s)
+### Condition(s)
 - if p & q are on the same side of the tree, iterate (move) to that subtree
 - if p & q are not on the same side of the tree, return the current node
