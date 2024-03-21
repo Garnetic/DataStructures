@@ -1,4 +1,4 @@
-public class Invert {
+public class JavaLab4 {
 
     public static void main(String[] args) {
         TreeNode root = new TreeNode(1);
