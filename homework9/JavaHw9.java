@@ -25,7 +25,6 @@ public class JavaHw9 {
         System.out.println("LCA of 1 and 5: " + lca4.val); // Expected output: 4
     }
 
-    // Higher order LCA function, calls the recursive helper
     public static TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
         // Special edge case
         if (root == null || p == null || q == null) {
