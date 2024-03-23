@@ -15,23 +15,22 @@ def lowestCommonAncestor(root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'Tre
     # Otherwise, this is the LCA
     return root
 
-if __name__ == "__main__":
-    # make the binary search tree
-    root = TreeNode(4)
-    three = root.left = TreeNode(3)
-    eight = root.right = TreeNode(8)
-    one = three.left = TreeNode(1)
-    five = eight.left = TreeNode(5)
-    nine = eight.right = TreeNode(9)
+# make the binary search tree
+root = TreeNode(4)
+three = root.left = TreeNode(3)
+eight = root.right = TreeNode(8)
+one = three.left = TreeNode(1)
+five = eight.left = TreeNode(5)
+nine = eight.right = TreeNode(9)
 
-    # Test cases
-    lca1 = lowestCommonAncestor( root, one, nine)
-    print("LCA of 1 and 9:", lca1.val)  # Expected output: 4
+# Test cases
+lca1 = lowestCommonAncestor( root, one, nine)
+print("LCA of 1 and 9:", lca1.val)  # Expected output: 4
 
-    lca2 = lowestCommonAncestor(root, five, nine)
-    print("LCA of 5 and 9:", lca2.val)  # Expected output: 8
+lca2 = lowestCommonAncestor(root, five, nine)
+print("LCA of 5 and 9:", lca2.val)  # Expected output: 8
 
-    lca3 = lowestCommonAncestor(root, three, one)
+lca3 = lowestCommonAncestor(root, three, one)
     print("LCA of 3 and 1:", lca3.val)  # Expected output: 3
 
     lca4 = lowestCommonAncestor(root, one, five)
