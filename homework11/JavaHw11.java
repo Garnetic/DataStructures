@@ -1,10 +1,9 @@
-import javax.management.timer.TimerMBean;
 import java.util.*;
 
 public class JavaHw11 {
     public static int[][] floodFill(int[][] image, int sr, int sc, int color) {
-        if (image[sr][sc] == color) { // If there is nothing to change
-            System.out.println("Color already set, no change");
+        if (image.length < 1 || image[0].length < 1 || image[sr][sc] == color) { // If there is nothing to change
+            System.out.println("No change needed");
             print(image);
             return image; // Don't change it
         }
@@ -76,5 +75,10 @@ public class JavaHw11 {
                           {1,0,1},
                           {1,1,1}};
         floodFill(image4, 0, 0, 2);
+
+        // Test case 5
+        System.out.println("Test Case 5:");
+        int[][] image5 = {};
+        floodFill(image5, 0, 0, 2);
     }
 }
