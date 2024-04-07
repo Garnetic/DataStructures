@@ -49,7 +49,7 @@ public class JavaExtraAdj {
         boolean[][] adjMatrix = new boolean[vertices][vertices]; // Make a adjMatrix to fill and return
 
         for (int i = 0; i < vertices; i++) { // For each vertex in the adjList
-            for (int j : adjList.get(i)) { // Iterate through it's list of attached nodes
+            for (int j : adjList.get(i)) { // Iterate through it's list of attached vertices
                 adjMatrix[i][j] = true; // And set the intersection of two vertices as true in the matrix
             }
         }
