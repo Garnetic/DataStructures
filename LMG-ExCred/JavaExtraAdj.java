@@ -123,8 +123,8 @@ public class JavaExtraAdj {
         public Graph reverseEdges() {
             Graph reversedGraph = new Graph(vertices); // Create a new graph to copy reversed edges into
             for (int u = 0; u < vertices; u++) { // For each edge "u"
-                for (int v : adjList.get(u)) { // Get what edge "u" is pointing to from the adjLust
-                    // And add an edge from the edge that's being pointed at "v"
+                for (int v : adjList.get(u)) { // Get what vertex ("u") is pointing to from the adjList
+                    // And add an edge from the vertex that's being pointed at ("v")
                     // From "v" to "u" into the new graph
                     reversedGraph.addEdge(v, u);
                 }
