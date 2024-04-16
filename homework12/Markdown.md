@@ -1,0 +1,13 @@
+# High-Level Approach(es)
+- Create an edgelist to store edges
+- Add wells to the edgelist
+- Add in the edges from the given 2D array into the edgeList
+- Sort the edges from smallest to largest (cost)
+- Create an array to keep track of nodes in the MST
+- Create a total cost, initialized at 0
+- Iterate through the edges (now sorted)
+  - Store the current edge and it's connections (to & from)
+  - Check if the current edge would form a cycle
+  - If not, then add the edge to the MST
+  - And add the cost of the edge to the total cost
+- Then return the total cost of the edges added to the MST
