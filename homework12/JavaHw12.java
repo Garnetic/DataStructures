@@ -56,8 +56,8 @@ public class JavaHw12 {
 
         // Iterate through all edges (now sorted)
         for (int[] edge : edgesArr) {
-            int i = edge[0];   // From edge
-            int j = edge[1];   // To edge
+            int i = edge[0];   // From vertex
+            int j = edge[1];   // To vertex
             int k = edge[2];   // For the cost of the edge
 
             // Use the find structure to check if the current edge forms a cycle.
