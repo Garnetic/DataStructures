@@ -1,34 +1,24 @@
-def isAnagram(s, t):
-    if len(s) != len(t):
+def is_anagram(s, t):
+    if len(s) != len(t):  # If they are not the same length, they're not anagrams
         return False
 
-    # Create a dictionary to count the frequency of each character in s
-    count_s = {}
+    # Create copies of the strings as lists for manipulation
+    t_list = list(t)
+
     for char in s:
-        if char in count_s:
-            count_s[char] += 1
+        if char in t_list:
+            t_list.remove(char)  # Remove the character once it's matched
         else:
-            count_s[char] = 1
+            return False  # If the character from s isn't in t, return False
 
-    # Subtract the frequency of each character found in t from count_s
-    for char in t:
-        if char in count_s:
-            count_s[char] -= 1
-            if count_s[char] == 0:
-                del count_s[char]
-        else:
-            return False
-
-    # If count_s is empty, then t is an anagram of s
-    return len(count_s) == 0
+    return len(t_list) == 0  # If all characters match and are removed, t_list should be empty
 
 def main():
-    # Two test cases to show functionality
-    test1 = isAnagram("listen", "silent")
-    print(f"Is 'silent' an anagram of 'listen'? {test1}")  # Expected: True
+    s = "listen"
+    t = "silent"
 
-    test2 = isAnagram("hello", "world")
-    print(f"Is 'world' an anagram of 'hello'? {test2}")  # Expected: False
+    result = is_anagram(s, t)
+    print(f'Is "{t}" an anagram of "{s}"? {result}')
 
 if __name__ == "__main__":
     main()
