@@ -2,7 +2,7 @@
 ## Problem 1:
 - 10000000000n^(2) vs n^(3) -> n^(3) is bigger
 - n^2 log(n) vs n(log(n))^(10) -> n^2 log(n) is bigger
-- n^(logn) vs 2^root(n) -> n^(logn) is bigger
+- n^(logn) vs 2^sqrt(n) -> n^(logn) is bigger
 - 2^(n) vs 2^(2n) -> 2^(2n) is bigger
 
 ## Problem 2:
