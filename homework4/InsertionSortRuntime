@@ -1,0 +1,7 @@
+# Insertion sort time complexities
+- Best Case: Omega(n) if it is already sorted
+  - The first for loop just needs to go through the array once
+- Average Case: Theta(n^2) as it's rarely going to be sorted
+  - Needs to iterate through entire array O(n) and compare to everything before O(n)
+- Worst Case: O(n^2) as the array is unsorted
+  - Still needs to iterate through both for loops, O(n^2)
