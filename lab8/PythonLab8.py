@@ -1,4 +1,4 @@
-def coin_change(coins, amount):
+def coinChange(coins, amount):
     # Initialize an array to store the smallest number of coins
     # needed for each amount from 0 to amount
     array = [float('inf')] * (amount + 1)
@@ -20,8 +20,8 @@ def main():
     coins1 = [1, 5, 10, 25, 50, 100]
     coins2 = [1, 10, 25, 50, 100]
 
-    print(coin_change(coins1, 40))  # Should be 3 since we have 5
-    print(coin_change(coins2, 40))  # Should be 4 since we don't have 5
+    print(coinChange(coins1, 40))  # Should be 3 since we have 5
+    print(coinChange(coins2, 40))  # Should be 4 since we don't have 5
 
 if __name__ == "__main__":
     main()
